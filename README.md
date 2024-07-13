@@ -16,7 +16,7 @@ This repository provides a step-by-step guide for setting up Docker, Nginx, and 
 
 ## Steps
 
-1. **Identify OS and Specs**
+## 1. **Identify OS and Specs**
 
    - **Check OS**
      ```sh
@@ -28,35 +28,35 @@ This repository provides a step-by-step guide for setting up Docker, Nginx, and 
      lscpu
      ```
 
-2. **Install Docker**
+## 2. **Install Docker**
 
    Run the following script to install Docker:
 
    ```bash
    ./install_docker.sh
+   ```
 
-
-### 3. Build and Run the Sample Web Application
-# Build the Docker image
+## 3. Build and Run the Sample Web Application
+### Build the Docker image
 sudo docker build -t sample-web-app .
 
-# Run the Docker container on port 8080
+### Run the Docker container on port 8080
 sudo docker run -d -p 8080:80 sample-web-app
 
-### 4. Setup Nginx
-# Install Nginx
+## 4. Setup Nginx
+### Install Nginx
 sudo apt-get install -y nginx
 
-# Start Nginx service
+### Start Nginx service
 sudo systemctl start nginx
 
-# Enable Nginx to start on boot
+### Enable Nginx to start on boot
 sudo systemctl enable nginx
 
-### 5. Configure Nginx
+## 5. Configure Nginx
 sudo nano /etc/nginx/sites-available/default
 
-# Replace the content with the following configuration, adjusting your-domain.com with your actual domain:
+### Replace the content with the following configuration, adjusting your-domain.com with your actual domain:
 
 server {
     listen 80;
@@ -71,7 +71,7 @@ server {
     }
 }
 
-# Test and apply Nginx configuration changes:
+### Test and apply Nginx configuration changes:
 
 sudo nginx -t
 sudo systemctl reload nginx
