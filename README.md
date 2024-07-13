@@ -16,21 +16,25 @@ This repository provides a step-by-step guide for setting up Docker, Nginx, and 
 
 ## Steps
 
-### 1. Identify OS and Specs
+1. **Identify OS and Specs**
 
-```bash
-# Check OS
-uname -a
+   - **Check OS**
+     ```sh
+     uname -a
+     ```
 
-# Check system specs
-lscpu
+   - **Check system specs**
+     ```sh
+     lscpu
+     ```
 
-### 2. Install Docker
+2. **Install Docker**
 
-Run the following script to install Docker:
+   Run the following script to install Docker:
 
-```bash
-./install_docker.sh
+   ```bash
+   ./install_docker.sh
+
 
 ### 3. Build and Run the Sample Web Application
 # Build the Docker image
